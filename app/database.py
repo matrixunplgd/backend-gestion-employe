@@ -8,11 +8,13 @@ from sqlalchemy.orm import sessionmaker
 os.environ['PGCLIENTENCODING'] = 'UTF8'
 
 #  PostgreSQL  en local
-SQLALCHEMY_DATABASE_URL = "postgresql://admin:admin123@localhost:5432/dbdit"
+# SQLALCHEMY_DATABASE_URL = "postgresql://admin:admin123@localhost:5432/dbdit"
 
+# Postgres conteneurise
+# SQLALCHEMY_DATABASE_URL = "postgresql://admin:admin123@postgres_server:5432/dbdit"
 
 #  PostgreSQL  en deploiement avec Docker Compose
-# SQLALCHEMY_DATABASE_URL = "postgresql://admin:admin123@db-service:5432/dbdit"
+SQLALCHEMY_DATABASE_URL = "postgresql://admin:admin123@db-service:5432/dbemploye"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, 
